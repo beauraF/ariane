@@ -1,0 +1,3 @@
+json.version ENV.fetch('HEROKU_RELEASE_VERSION')
+json.commit ENV.fetch('HEROKU_SLUG_COMMIT')
+json.created_at ENV.fetch('HEROKU_RELEASE_CREATED_AT')

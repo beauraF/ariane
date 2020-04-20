@@ -1,0 +1,12 @@
+require "test_helper"
+
+class PingsControllerTest < ActionDispatch::IntegrationTest
+  test 'get show' do
+    expected = { version: 'v1', commit: '70d5b4aecaa7f8e7c151a820bbf9d22cbc46d654', created_at: '2019-01-01T08:00:00Z' }
+
+    get ping_path
+
+    assert_response :success
+    assert_equal(expected, JSON.parse(response.body, symbolize_names: true))
+  end
+end

@@ -1,0 +1,15 @@
+Rails.application.config.action_mailer.smtp_settings = {
+  address: ENV.fetch('SMTP_ADDRESS'),
+  user_name: ENV.fetch('SMTP_USER_NAME'),
+  password: ENV.fetch('SMTP_PASSWORD'),
+  authentication: :plain,
+}
+
+Rails.application.config.action_mailer.default_options = {
+  from: ENV.fetch('ACTION_MAILER_DEFAULT_FROM'),
+}
+
+Rails.application.config.action_mailer.default_url_options = {
+  host: ENV.fetch('APPLICATION_HOST'),
+  port: ENV.fetch('APPLICATION_PORT').to_i.nonzero?,
+}

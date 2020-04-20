@@ -1,0 +1,7 @@
+'*.js':
+- yarn eslint --max-warnings 0 --fix
+- yarn prettier --write
+'*.{json,yml,scss,md}':
+- yarn prettier --write
+'*':
+- bundle exec rubocop --auto-correct --force-exclusion

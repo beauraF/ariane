@@ -1,0 +1,44 @@
+require:
+  - rubocop-rails
+  - rubocop-performance
+
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'db/schema.rb'
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
+
+Layout/ArgumentAlignment:
+  Enabled: true
+  EnforcedStyle: with_fixed_indentation
+Layout/LineLength:
+  Enabled: true
+  Max: 120
+Metrics/AbcSize:
+  Enabled: true
+  Exclude:
+    - 'db/migrate/*'
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - 'config/initializers/**/*'
+Metrics/MethodLength:
+  Enabled: true
+  Exclude:
+    - 'db/migrate/*'
+Naming/MemoizedInstanceVariableName:
+  Enabled: true
+  EnforcedStyleForLeadingUnderscores: required
+SkipsModelValidations:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: true
+  EnforcedStyle: compact
+  Exclude:
+    - 'config/application.rb'
+Style/Documentation:
+  Enabled: false
+Style/TrailingCommaInHashLiteral:
+  Enabled: true
+  EnforcedStyleForMultiline: comma

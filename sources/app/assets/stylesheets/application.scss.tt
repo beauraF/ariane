@@ -1,0 +1,15 @@
+@import 'variables';
+
+/* third parties */
+
+/*! purgecss start ignore */
+@import '~tailwindcss/base';
+@import '~tailwindcss/components';
+/*! purgecss end ignore */
+
+@import '~tailwindcss/utilities';
+
+/* core */
+
+@import 'base';
+@import 'utilities';

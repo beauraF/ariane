@@ -1,0 +1,38 @@
+version: 1
+
+update_configs:
+  - package_manager: "ruby:bundler"
+    update_schedule: "weekly"
+    directory: "/"
+    target_branch: "master"
+    allowed_updates:
+      - match:
+          update_type: "all"
+          dependency_type: "direct"
+      - match:
+          update_type: "security"
+          dependency_type: "indirect"
+    version_requirement_updates: "off"
+    automerged_updates:
+      - match:
+          update_type: "semver:patch"
+    default_assignees:
+      - "<%= DEPENDABOT_DEFAULT_ASSIGNEE %>"
+
+  - package_manager: "javascript"
+    update_schedule: "weekly"
+    directory: "/"
+    target_branch: "master"
+    allowed_updates:
+      - match:
+          update_type: "all"
+          dependency_type: "direct"
+      - match:
+          update_type: "security"
+          dependency_type: "indirect"
+    version_requirement_updates: "auto"
+    automerged_updates:
+      - match:
+          update_type: "semver:patch"
+    default_assignees:
+      - "<%= DEPENDABOT_DEFAULT_ASSIGNEE %>"

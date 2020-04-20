@@ -1,0 +1,30 @@
+{
+  "name": "<%= app_name %>",
+  "private": true,
+  "scripts": {
+    "eslint:check": "eslint --max-warnings 0 '**/*.js'",
+    "eslint:write": "eslint --max-warnings 0 --fix '**/*.js'",
+    "prettier:check": "prettier --check '**/*.{js,json,yml,scss,md}'",
+    "prettier:write": "prettier --write '**/*.{js,json,yml,scss,md}'"
+  },
+  "engines": {
+    "node": "<%= NODE_REQUIRED_VERSION %>",
+    "yarn": "<%= YARN_REQUIRED_VERSION %>"
+  },
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.0.0",
+    "@rails/ujs": "^6.0.0",
+    "tailwindcss": "1.0.0",
+    "turbolinks": "^5.2.0",
+    "@rails/activestorage": "^6.0.0",
+    "@rails/actioncable": "^6.0.0",
+    "webpack": "^4.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.0.0",
+    "eslint-config-prettier": "^6.0.0",
+    "husky": "^4.0.0",
+    "lint-staged": "^10.0.0",
+    "prettier": "^2.0.0"
+  }
+}
