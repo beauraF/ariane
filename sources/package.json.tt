@@ -12,7 +12,6 @@
     "yarn": "<%= YARN_REQUIRED_VERSION %>"
   },
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "^2.0.0",
     "@rails/ujs": "^6.0.0",
     "tailwindcss": "1.0.0",
     "turbolinks": "^5.2.0",

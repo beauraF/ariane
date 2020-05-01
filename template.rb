@@ -29,6 +29,7 @@ template 'Gemfile', force: true
 template 'package.json', force: true
 template 'Procfile'
 template 'README.md', force: true
+template 'tailwind.config.js'
 
 directory '.dependabot'
 directory '.github'
